@@ -1,3 +1,37 @@
+#  principais aspectos da implementação:
+# Características da Implementação
+# 1. Interface Transacao
+
+# Implementada como classe abstrata (ABC) com método registrar()
+# Seguida pelas classes Deposito e Saque
+
+# 2. Hierarquia de Classes
+
+# Cliente → PessoaFisica (herança)
+# Conta → ContaCorrente (herança)
+# Todas as propriedades encapsuladas com getters
+
+# 3. Relacionamentos
+
+# Cliente tem lista de contas (composição)
+# Conta tem histórico (composição)
+# Transações são registradas no histórico
+
+# 4. Funcionalidades Preservadas
+
+# Todas as operações do código original mantidas
+# Validações de saque (limite, número de saques, saldo)
+# Sistema de menu interativo
+# Cadastro de clientes e contas
+
+# 5. Melhorias Adicionadas
+
+# Timestamps nas transações
+# Melhor organização e separação de responsabilidades
+# Uso de properties para encapsulamento
+# Padrão Strategy para diferentes tipos de transação
+
+
 from abc import ABC, abstractmethod
 from datetime import datetime
 from typing import List
